@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import  {Grid}  from '@material-ui/core';
 import  Box from '@material-ui/core/Box';
 import { Typography } from '@material-ui/core';
-import Video from './../../assets/f3.mp4';
+import Video from './../../assets/v4.mp4';
 
 
 const useStyles = makeStyles({
@@ -27,7 +27,7 @@ const DemoCont=()=> {
                 </Box>
             </Grid>
             
-            <video width="45%" height="525" controls src={Video}>
+            <video width="65%" height="550" controls src={Video}>
             </video>
             {console.log(Video)}
 

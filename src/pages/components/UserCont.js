@@ -48,7 +48,6 @@ const useStyles = theme=>({
     }
   }); 
   
-  
   class UserCont extends React.Component {
    
 
@@ -59,13 +58,15 @@ const useStyles = theme=>({
         signals: ["Red", "Red", "Red", "Red"]
       };
   
-      this.times = [];
+      // this.times = [];
+      this.times = [34, 28, 30, 26];
       // Initialize array of random times between 1 second 
       // to 5 second
       
-      for(let i = 0; i < 4; i++) {
-        this.times.push(Math.floor(Math.random() * (20000 - 1000)) + 10000);
-      }
+      // for(let i = 0; i < 4; i++) {
+      //   this.times.push(Math.floor(Math.random() * (20000 - 1000)) + 10000);
+      // }
+
       console.log(this.times);
       this.counter = 0;
     }
@@ -112,7 +113,7 @@ const useStyles = theme=>({
           index: index,
           signals: signals
         });
-      }, this.times[index]);
+      }, this.times[index]*1000);
   
       console.log("Component Updated");
      
@@ -134,22 +135,22 @@ const useStyles = theme=>({
               </Grid>
               <Grid container direction="row"  align="center">
               <Grid item lg="3" md="3" sm="12" >
-              {this.state.signals[0] == "Green"?  <div className={classes.circle} style={{ color: "white", background:"green"  }}>{this.state.signals[0]}</div> : <div className={classes.circle} style={{ color: "black", background:"red"}}>{this.state.signals[0]}</div>  }
+              {this.state.signals[0] == "Green"?  <div className={classes.circle} style={{ color: "white", background:"green"  }}>{this.times[0]+"s"}</div> : <div className={classes.circle} style={{ color: "black", background:"red"}}>{this.state.signals[0]}</div>  }
                   <video  width="90%"  height="" controls="controls" autoplay="autoplay" loop="loop" src={v1}>
               </video>    
               </Grid>
               <Grid item lg="3" md="3" sm="12" >
-              {this.state.signals[1] == "Green"?  <div className={classes.circle} style={{ color: "white", background:"green"  }}>{this.state.signals[1]}</div> : <div className={classes.circle} style={{ color: "black", background:"red"}}>{this.state.signals[1]}</div>  }
+              {this.state.signals[1] == "Green"?  <div className={classes.circle} style={{ color: "white", background:"green"  }}>{this.times[1]+"s"}</div> : <div className={classes.circle} style={{ color: "black", background:"red"}}>{this.state.signals[1]}</div>  }
                   <video  width= "90%"  height="" controls="controls" autoplay="autoplay" loop="loop"  src={v2}>
               </video>    
               </Grid>
               <Grid item lg="3" md="3" sm="12" >
-              {this.state.signals[2] == "Green"?  <div className={classes.circle} style={{ color: "white", background:"green"  }}>{this.state.signals[2]}</div> : <div className={classes.circle} style={{ color: "black", background:"red"}}>{this.state.signals[2]}</div>  }
+              {this.state.signals[2] == "Green"?  <div className={classes.circle} style={{ color: "white", background:"green"  }}>{this.times[2]+"s"}</div> : <div className={classes.circle} style={{ color: "black", background:"red"}}>{this.state.signals[2]}</div>  }
                   <video  width="90%"  height="" controls="controls" autoplay="autoplay" loop="loop" src={v3}>
               </video>    
               </Grid>
               <Grid item lg="3" md="3" sm="12" >
-              {this.state.signals[3] == "Green"?  <div className={classes.circle} style={{ color: "white", background:"green"  }}>{this.state.signals[3]}</div> : <div className={classes.circle} style={{ color: "black", background:"red"}}>{this.state.signals[3]}</div>  }
+              {this.state.signals[3] == "Green"?  <div className={classes.circle} style={{ color: "white", background:"green"  }}>{this.times[3]+"s"}</div> : <div className={classes.circle} style={{ color: "black", background:"red"}}>{this.state.signals[3]}</div>  }
                   <video  width="90%"  height="" controls="controls" autoplay="autoplay" loop="loop" src={v4}>
               </video>    
               </Grid>
